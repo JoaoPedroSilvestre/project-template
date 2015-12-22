@@ -1,0 +1,114 @@
+		
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	<meta name="JS" content="CW APP">
+		<title>CW Test Page</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src ="js/cwApp.js"></script>
+		
+		<link href = "http://web.ist.utl.pt/alfredo.ferreira/cw/css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "http://web.ist.utl.pt/alfredo.ferreira/cw/css/bootstrap-theme.css" rel = "stylesheet">
+		<link href = "http://web.ist.utl.pt/alfredo.ferreira/cw/css/theme.css" rel = "stylesheet">
+		<link href = "http://web.ist.utl.pt/alfredo.ferreira/cw/css/bootstrap.css" rel = "stylesheet">
+		
+    <title>Dashboard Template for Bootstrap</title>
+
+  </head>
+
+  <body>
+
+    <div class="container-fluid" ng-app="cwApp" >
+
+
+  <!--################## CABEÇALHO ########################### -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">InSure </a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Dashboard</a></li>
+			  </ul>
+			  <form class="navbar-form navbar-right">
+				<input type="text" class="form-control" placeholder="Search..." class="form-search form-control" >
+			  </form>
+			</div>
+		  </div>
+		</nav>
+	
+	  <!--################## SIDE BAR - supostamente a WAINTING LIST ########################### -->
+      
+	  <div class="row" >
+        <div class="col-sm-3 col-md-2 sidebar">	  
+		  <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+          
+		  
+		  <table class = "table table-striped">
+			<p>
+			<input type="text" class="form-control" placeholder="Search..." class="form-search form-control"data-ng-model = "patients_filter"/>
+			</p>
+				<thead>
+					<tr>
+						<th>Patient ID</th>
+						<th>Nome </th>
+						<th>Policy Number</th>
+						<th>Policy Type</th>
+					</tr>
+				</thead>
+					
+				
+          </table>
+		  
+		  </ul>
+		  
+        </div>
+		
+		<!--##################      TABELAS       ########################### -->
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-2 main">
+ 
+          <h1 class="sub-header">Medical Acts</h1>
+		  	
+		  <div class = "table-responsive" ng-controller = "actTypeDataCtrl">
+			
+            <table class = "table table-striped">
+			
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Cost</th>
+						<th>Reimbursement %</th>
+					</tr>
+				</thead>
+					<tr ng-repeat = "a in actTypeData | orderBy: 'name' ">
+						<td>{{a.name}} </td><td> {{a.cost}}</td><td>  {{a.cost}}</td>
+					</tr>
+				
+            </table>
+			
+			
+          </div>
+	  
+		  
+        </div>
+	    </div>
+    </div>
+
+
+  </body>
+</html>
