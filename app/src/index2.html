@@ -5,27 +5,27 @@
       <link href="http://alfredoferreira.eu/cw/css/bootstrap-theme.min.css" rel="stylesheet">
       <link href="http://alfredoferreira.eu/cw/css/theme.css" rel="stylesheet">
    </head>
+
  <body>
+
+	<div data-ng-app="cwApp">
   
 	<ul class="nav nav-tabs">
-	  <li role="presentation" onclick="location.href='login.html'" ><a href="#">Login page</a></li>
-	  <li role="presentation" onclick="location.href='consult.html'" ><a href="#">Consultations</a></li>
-	  <li role="presentation" class="active"><a href="#">Patient file</a></li>
+	  <li role="presentation" onclick="location.href='index1.html'" ><a href="#">Log out</a></li>
+	  <li role="presentation" class="active"><a href="#">Home</a></li>
 	</ul>
 
 	<div class="jumbotron">
 		<div class="row">
+			<!--<body style="background-color:lightgrey;">  com esta linha o fundo fica cinzento-->
 		
 			<div class="col-xs-6 col-md-1" >
 			</div>
 		  
 			<div class="col-xs-6 col-md-6" >
-				<h1>British Hospital</p>
+				<h1>InSure</h1>
+				<p>Querem dizer algo aqui?</p>
 				
-				<div align="left" >
-				<button class="btn btn-primary" onclick="location.href='login.html'">Home</button>
-				<button class="btn btn-primary" onclick="location.href='consult.html'"> << Back</button>
-				</div>
 			</div>
 			
 			<div class="col-xs-6 col-md-4" > 
@@ -43,13 +43,22 @@
 	
 		<div class="col-xs-6 col-md-1" >
 		</div>
+		
 	  
 		<div class="col-xs-6 col-md-3" >
-			<h1>Patient Data</h1> <br>
+			<h1>Waiting list</h1> <br>
 			
-			<p> Name: Rui Miguel Sousa Alves</p>
-			<p> Age: 25 years</p>
-			<p> Policy ID: IP0001</p>
+			
+			
+			<table ng-controller="patientsCtrl">
+				<tr data-ng-repeat="p in patients | orderBy:'name'">
+					<!--<td>{{ p.name }}</td>-->
+				</tr>
+			</table>
+			
+			<a href="index3.html">Patient 1</a></br>
+			<a href="index3.html">Patient 2</a></br>
+			<a href="index3.html">Patient 3</a></br>			
 			
 		</div>
 		
@@ -57,48 +66,63 @@
 		</div>
 		
 		<div class="col-xs-12 col-sm-6 col-md-6">
-
-			<h1>Medical Acts</h1> <br>
-			
-			
-			<div class="table-responsive">
-				<table class="table table-bordered">
-				  <thead style="background-color:darkgrey";>
-				  <!-- or  #237FDB -->
-					<tr style="color:white">
-					  <th>Description</th>
-					  <th>Cost</th>
-					  <th>Refund</th>
-					  <th>%</th>
-					</tr>
-				  </thead>
-				  <tbody>
-					<tr>
-					  <th scope="row">X-Ray</th>
-					  <td>180</td>
-					  <td>70</td>
-					  <td>-</td>
-					</tr>
-					<tr>
-					  <th scope="row">CT Scan</th>
-					  <td>100</td>
-					  <td>85</td>
-					  <td>-</td>
-					</tr>
-				  </tbody>
-				</table>
+		
+			<h1>Insurance Requirements</h1> <br>
+	  
+			<div class="panel panel-primary">
+				<div class="panel-heading">Pending</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+					<table>
+					<p> Aqui devia ter umas setas para andar para cima e para baixo e também algo 
+					do género: nome à esquerda e do lado direito um botão que com um olho (ver) e outro
+					com um lápis para editar</p>
+					<!-- Insert table! -->
+					</table>
+					</div>
+				</div>
 			</div>
-								
-					
-						
-			<br><br>
-			<div align="right">
-				<button class="btn btn-primary" onclick="location.href='Login-Isabel.html'">Add</button>
-				</button>
-				<button class="btn btn-primary" onclick="location.href='Login-Isabel.html'">Save</button>
-				</button>
-				<button class="btn btn-primary" onclick="location.href='Login-Isabel.html'">Submit</button>
-				</button>	
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">Requested</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+					<table >
+					<p> Aqui devia ter umas setas para andar para cima e para baixo e também algo 
+					do género: nome à esquerda e do lado direito um botão que com um olho (ver) e outro
+					com um lápis para editar</p>
+					<!-- Insert table! -->
+					</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">Approved</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+					<table >
+					<p> Aqui devia ter umas setas para andar para cima e para baixo e também algo 
+					do género: nome à esquerda e do lado direito um botão que com um olho (ver) e outro
+					com um lápis para editar</p>
+					<!-- Insert table! -->
+					</table>
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">Rejected</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+					<table >
+					<p> Aqui devia ter umas setas para andar para cima e para baixo e também algo 
+					do género: nome à esquerda e do lado direito um botão que com um olho (ver) e outro
+					com um lápis para editar</p>
+					<!-- Insert table! -->
+					</table>
+					</div>
+				</div>
 			</div>
 		
 		</div>
@@ -116,7 +140,12 @@
     <script src="js/bootstrap.min.js"></script>
 	
 	</div>
-
+	
+	</div>
 	
   </body>
+	  <div id="footer" style="text-align:center;">
+	Copyright © W3Schools.com
+	</div>
+  
 </html>

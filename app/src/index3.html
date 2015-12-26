@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href="http://alfredoferreira.eu/cw/css/bootstrap.min.css" rel="stylesheet">
+      <link href="http://alfredoferreira.eu/cw/css/bootstrap-theme.min.css" rel="stylesheet">
+      <link href="http://alfredoferreira.eu/cw/css/theme.css" rel="stylesheet">
+   </head>
+ <body>
+  
+	<ul class="nav nav-tabs">
+	  <li role="presentation" onclick="location.href='index1.html'" ><a href="#">Log out</a></li>
+	  <li role="presentation" onclick="location.href='index2.html'" ><a href="#">Home</a></li>
+	  <li role="presentation" class="active"><a href="#">Patient file</a></li>
+	</ul>
+
+	<div class="jumbotron">
+		<div class="row">
+			<!--<body style="background-color:lightgrey;">  com esta linha o fundo fica cinzento-->
+		
+			<div class="col-xs-6 col-md-1" >
+			</div>
+		  
+			<div class="col-xs-6 col-md-6" >
+				<h1>InSure</p>
+			</div>
+			
+			<div class="col-xs-6 col-md-4" > 
+				<br><br><br><br><br><br>
+				<div style="float: right;"><IMG SRC="medico.jpg" width="100" height="100" > Dr. Snow</div>
+			</div>
+			
+			<div class="col-xs-6 col-md-1" >
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="row">
+	
+		<div class="col-xs-6 col-md-1" >
+		</div>
+	  
+		<div class="col-xs-6 col-md-3" >
+			<h1>Patient Data</h1> <br>
+			<!-- nao sei se isto aqui em baixo e suposto preencher automaticamente ou nao-->
+			
+			<p> Name: Rui Miguel Sousa Alves</p>
+			<p> Age: 25 years</p>
+			<p> Policy ID: IP0001</p>
+			
+		</div>
+		
+		<div class="col-xs-6 col-md-1" >
+		</div>
+		
+		<div class="col-xs-12 col-sm-6 col-md-6">
+
+			<h1>Medical Acts</h1> <br>
+			<!-- tambem devia ter algo com uma seta para andar para cima e para baixo na pagina -->
+			
+			
+			<div class="table-responsive">
+				<table class="table table-bordered">
+				  <thead style="background-color:darkgrey";>
+				  <!-- or  #237FDB -->
+					<tr style="color:white">
+					  <th>Description</th>
+					  <th>Cost</th>
+					  <th>Refund</th>
+					  <th>%</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <th scope="row">X-Ray</th>
+					  <td>180</td>
+					  <td>70</td>
+					  <td>-</td>
+					</tr>
+					<tr>
+					  <th scope="row">CT Scan</th>
+					  <td>100</td>
+					  <td>85</td>
+					  <td>-</td>
+					</tr>
+				  </tbody>
+				</table>
+			</div>
+								
+					
+						
+			<br><br>
+			<div align="right">
+				<button class="btn btn-primary" onclick="location.href='Login-Isabel.html'">Add</button> <!--supostamente haveria outra janela-->
+				</button>
+				<button class="btn btn-primary" onclick="location.href='Patient-Isabel.html'">Save</button>
+				</button>
+				<button class="btn btn-primary" onclick="location.href='Patient-Isabel.html'">Submit</button>
+				</button>	
+			</div>
+		
+		</div>
+		
+		<div class="col-xs-6 col-md-1" >
+		</div>
+	
+
+	
+		
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+<div id="footer" style="text-align:center;">
+	Copyright © W3Schools.com
+	</div>
+	
+  </body>
+</html>
